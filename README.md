@@ -13,3 +13,8 @@ i have set up an node project with dotenv to import the input files and parse th
 - step 2: use node to run the file you'd like, for example  
   `node day1.js`  
    input files are saved as txt, and parsed to arrays using core node modules fs and path, and javascript's Array.split() method
+
+Questions are linked below:
+
+- [day 1](https://adventofcode.com/2019/day/1)
+- [day 2](https://adventofcode.com/2019/day/2)
