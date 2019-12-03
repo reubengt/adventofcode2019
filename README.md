@@ -18,3 +18,4 @@ Questions are linked below:
 
 - [day 1](https://adventofcode.com/2019/day/1)
 - [day 2](https://adventofcode.com/2019/day/2)
+- [day 3](https://adventofcode.com/2019/day/3)
