@@ -49,4 +49,4 @@ for (let num = inputLower; num < inputHigher; num++) {
   }
   if (ascending && doubleAdjacent) count2++;
 }
-console.log("PART 2:"count2);
+console.log("PART 2:", count2);
