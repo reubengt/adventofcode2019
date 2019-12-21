@@ -32,4 +32,25 @@ const findIndirectOrbits = (planet, inputArray) => {
   return indirectOrbits;
 };
 
+const youToSanta = input => {
+  const inputArr = input;
+  const planetOrbitedbyYou = inputArr.find(
+    orbitRelation => orbitRelation[1] == "YOU"
+  )[0];
+  const planetOrbitedbySan = inputArr.find(
+    orbitRelation => orbitRelation[1] == "SAN"
+  )[0];
+  const indirectOrbitsYou = findIndirectOrbits(planetOrbitedbyYou, inputArr);
+  const indirectOrbitsSanta = findIndirectOrbits(planetOrbitedbySan, inputArr);
+  const commonPlanet = indirectOrbitsYou.find(orbit =>
+    indirectOrbitsSanta.includes(orbit)
+  );
+  const orbitalTransfers =
+    indirectOrbitsYou.indexOf(commonPlanet) +
+    indirectOrbitsSanta.indexOf(commonPlanet) +
+    2;
+  //+2 to account for zero indexing
+  return orbitalTransfers;
+};
 console.log("PART 1: ", orbitSum(input));
+console.log("PART 2: ", youToSanta(input));
