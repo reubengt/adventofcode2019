@@ -7,7 +7,6 @@ const inputFileContents = fs.readFileSync(inputFilePath, "utf-8");
 const input = inputFileContents.split("\n").map(orbit => orbit.split(")"));
 
 const orbitSum = input => {
-  //array to track which planets have already been counted
   const inputArr = input;
   let totalOrbitCount = 0;
   inputArr.forEach(orbitRelation => {
