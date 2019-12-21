@@ -13,21 +13,21 @@ const orbitSum = input => {
   inputArr.forEach(orbitRelation => {
     //one direct orbit for each relation
     totalOrbitCount++;
-    let indirectOrbits = countIndirectOrbits(orbitRelation[0], inputArr);
-    totalOrbitCount += indirectOrbits;
+    let indirectOrbitsArr = findIndirectOrbits(orbitRelation[0], inputArr);
+    totalOrbitCount += indirectOrbitsArr.length;
   });
   return totalOrbitCount;
 };
 
-const countIndirectOrbits = (planet, inputArray) => {
+const findIndirectOrbits = (planet, inputArray) => {
   inputArr = inputArray;
   let planetToFindLink = planet;
-  let indirectOrbits = 0;
+  let indirectOrbits = [];
   while (planetToFindLink !== "COM") {
     planetToFindLink = inputArray.find(
       orbitRelation => orbitRelation[1] === planetToFindLink
     )[0];
-    indirectOrbits++;
+    indirectOrbits.push(planetToFindLink);
   }
   return indirectOrbits;
 };
